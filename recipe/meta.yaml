@@ -10,7 +10,7 @@ source:
     md5: b3caa51fd2c2ae6e4e304e570489074f
 
 build:
-    number: 1
+    number: 2
     skip: True  # [win or py3k]
     detect_binary_files_with_prefix: true
 
@@ -20,14 +20,14 @@ requirements:
         - numpy x.x
         - jasper
         - libpng 1.6*
-        - libnetcdf 4.3*
+        - libnetcdf 4.4*
         - ecmwf_grib {{ version }}
     run:
         - python
         - numpy x.x
         - jasper
         - libpng 1.6*
-        - libnetcdf 4.3*
+        - libnetcdf 4.4*
         - ecmwf_grib {{ version }}
 
 test:
