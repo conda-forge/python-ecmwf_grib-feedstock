@@ -1,4 +1,4 @@
-{% set version = "1.14.7" %}
+{% set version = "1.15.0" %}
 
 package:
     name: python-ecmwf_grib
@@ -7,12 +7,12 @@ package:
 source:
     fn: grib_api-{{ version }}.tar.gz
     url: https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-{{ version }}-Source.tar.gz
-    md5: b3caa51fd2c2ae6e4e304e570489074f
+    md5: df1e3779df73d09570c338ebe46341cf
     patches:
       - gribapi_py3k.patch  # [py3k]
 
 build:
-    number: 2
+    number: 0
     skip: True  # [win]
     detect_binary_files_with_prefix: true
 
