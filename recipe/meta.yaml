@@ -10,6 +10,7 @@ source:
     md5: df1e3779df73d09570c338ebe46341cf
     patches:
       - gribapi_py3k.patch  # [py3k]
+      - right_python.patch  # [py3k and osx]
 
 build:
     number: 0
