@@ -23,15 +23,15 @@ requirements:
         - python
         - numpy x.x
         - jasper
-        - libpng 1.6*
-        - libnetcdf 4.4*
+        - libpng >=1.6.21,<1.7
+        - libnetcdf 4.4.*
         - ecmwf_grib {{ version }}
     run:
         - python
         - numpy x.x
         - jasper
-        - libpng 1.6*
-        - libnetcdf 4.4*
+        - libpng >=1.6.21,<1.7
+        - libnetcdf 4.4.*
         - ecmwf_grib {{ version }}
 
 test:
@@ -48,3 +48,4 @@ extra:
         - pelson
         - rhattersley
         - ocefpaf
+        - kmuehlbauer
