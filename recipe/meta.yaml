@@ -1,4 +1,4 @@
-{% set version = "1.15.0" %}
+{% set version = "1.19.0" %}
 
 package:
   name: python-ecmwf_grib
@@ -7,7 +7,7 @@ package:
 source:
   fn: grib_api-{{ version }}.tar.gz
   url: https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-{{ version }}-Source.tar.gz
-  md5: df1e3779df73d09570c338ebe46341cf
+  sha256: caec66c2d54331de9830dde853195262a1859bab36d5d03b4d44ac55784d921d
 
 build:
   number: 0
