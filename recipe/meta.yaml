@@ -8,13 +8,10 @@ source:
   fn: grib_api-{{ version }}.tar.gz
   url: https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-{{ version }}-Source.tar.gz
   md5: df1e3779df73d09570c338ebe46341cf
-  patches:
-    - gribapi_py3k.patch  # [py3k]
-    - right_python.patch  # [py3k and osx]
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
 requirements:
