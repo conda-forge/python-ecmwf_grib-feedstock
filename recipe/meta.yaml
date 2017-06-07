@@ -10,7 +10,7 @@ source:
   sha256: caec66c2d54331de9830dde853195262a1859bab36d5d03b4d44ac55784d921d
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -20,14 +20,14 @@ requirements:
     - python
     - numpy x.x
     - jasper
-    - libpng >=1.6.23,<1.7
+    - libpng >=1.6.28,<1.7
     - libnetcdf 4.4.*
     - ecmwf_grib {{ version }}
   run:
     - python
     - numpy x.x
     - jasper
-    - libpng >=1.6.23,<1.7
+    - libpng >=1.6.28,<1.7
     - libnetcdf 4.4.*
     - ecmwf_grib {{ version }}
 
@@ -35,8 +35,8 @@ test:
   imports:
     - gribapi
   commands:
-    #- conda inspect linkages -p $PREFIX python-ecmwf_grib  # [not win]
-    #- conda inspect objects -p $PREFIX python-ecmwf_grib  # [osx]
+    - conda inspect linkages -p $PREFIX python-ecmwf_grib  # [not win]
+    - conda inspect objects -p $PREFIX python-ecmwf_grib  # [osx]
 
 
 about:
