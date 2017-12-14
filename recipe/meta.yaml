@@ -5,7 +5,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: grib_api-{{ version }}.tar.gz
   url: https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-{{ version }}-Source.tar.gz
   sha256: 7b0c40bcc8794ee11385bd6b9c5230a23e2432c88c8203dfdc7ccee054535ad4
 
