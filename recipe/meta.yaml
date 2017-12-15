@@ -5,12 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  fn: grib_api-{{ version }}.tar.gz
   url: https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-{{ version }}-Source.tar.gz
   sha256: 7b0c40bcc8794ee11385bd6b9c5230a23e2432c88c8203dfdc7ccee054535ad4
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -20,23 +19,25 @@ requirements:
     - python
     - numpy 1.8.*
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.32,<1.6.35
     - libnetcdf 4.4.*
+    - hdf5 1.10.1
     - ecmwf_grib {{ version }}
   run:
     - python
     - numpy >=1.8
     - jasper
-    - libpng >=1.6.28,<1.7
+    - libpng >=1.6.32,<1.6.35
     - libnetcdf 4.4.*
+    - hdf5 1.10.1
     - ecmwf_grib {{ version }}
 
 test:
   imports:
     - gribapi
   commands:
-    - conda inspect linkages -p $PREFIX python-ecmwf_grib  # [not win]
-    - conda inspect objects -p $PREFIX python-ecmwf_grib  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 
 about:
