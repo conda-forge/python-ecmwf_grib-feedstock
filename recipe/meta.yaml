@@ -20,7 +20,7 @@ requirements:
     - numpy 1.8.*
     - jasper
     - libpng >=1.6.32,<1.6.35
-    - libnetcdf 4.4.*
+    - libnetcdf 4.5.*
     - hdf5 1.10.1
     - ecmwf_grib {{ version }}
   run:
@@ -28,7 +28,7 @@ requirements:
     - numpy >=1.8
     - jasper
     - libpng >=1.6.32,<1.6.35
-    - libnetcdf 4.4.*
+    - libnetcdf >=4.5
     - hdf5 1.10.1
     - ecmwf_grib {{ version }}
 
