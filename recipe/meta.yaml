@@ -9,27 +9,31 @@ source:
   sha256: adf54b649da4eb25aee8eb9a8f9fa2de3f0ea318c597be056cbb7c28535fa6ef
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
     - cmake
+    - {{ compiler('fortran') }}
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
-    - numpy 1.8.*
+    - numpy
     - jasper
-    - libpng >=1.6.32,<1.6.35
-    - libnetcdf 4.5.*
-    - hdf5 1.10.1
+    - libpng
+    - libnetcdf
+    - hdf5
     - ecmwf_grib {{ version }}
   run:
     - python
-    - numpy >=1.8
+    - {{ pin_compatible('numpy') }}
     - jasper
-    - libpng >=1.6.32,<1.6.35
-    - libnetcdf >=4.5
-    - hdf5 1.10.1
+    - libpng
+    - libnetcdf
+    - hdf5
     - ecmwf_grib {{ version }}
 
 test:
