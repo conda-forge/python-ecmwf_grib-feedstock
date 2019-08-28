@@ -47,6 +47,7 @@ test:
 about:
   home: https://software.ecmwf.int/wiki/display/GRIB/Home
   license: Apache-2.0
+  license_file: LICENSE
   summary: 'The ECMWF API for encoding and decoding WMO FM-92 GRIB edition 1 and edition 2 messages.'
 
 extra:
